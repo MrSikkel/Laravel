@@ -17,7 +17,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/courses', 'MasterklassiController@masterklassi')->name('masterklassi');
+Route::get('/perepodgotovka', 'PerepodgotovkaController@perepodgotovka')->name('perepodgotovka');
+Route::get('/faq', 'FaqController@faq')->name('faq');
+Route::get('/contact', 'ContactController@contact')->name('contact');
+Route::get('/proftraining', 'PrepodiController@prepodi')->name('prepodi');
+Route::get('/coursesofschoolboys', 'GalleryController@gallery')->name('gallery');
+Route::get('/account', 'ProfileController@index')->name('account');
+
 
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 //POST запрос аутентификации на сайте
@@ -46,3 +53,7 @@ Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 //POST запрос для сброса старого и установки нового пароля
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -17,7 +17,7 @@
 						<i class="fab fa-facebook-f fa-lg m-2 fa-2x text-white"> </i>
 					</a>
 					<!-- Vk -->
-					<a class="">
+					<a class="" href="https://vk.com/spospk" target="_blank">
 						<i class="fab fa-vk fa-lg m-2 fa-2x text-white"> </i>
 					</a>
 					<!-- Twitter-->
@@ -39,9 +39,9 @@
             <p>
               Россия, 636036, г. Северск Томской области
             </br>
-              ул. Крупской, 17, каб. 212
+              ул. Крупской, 17, каб. 104
             </br>
-              т. (3823) 780-311
+			т. (3823) 780-327, (3823) 780-366
             </br>
               факс (3823) 780-304
             </p>

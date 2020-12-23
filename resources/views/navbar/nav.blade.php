@@ -18,66 +18,61 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
         <!-- Left -->
+        
         <ul class="navbar-nav mr-auto text-center">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Бесплатные мероприятия
+          <li class="nav-item">
+            <a class="nav-link" href="/">Главная
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="" target="_blank">Ближайшие курсы</a>
+            <a class="nav-link" href="/courses">Ближайшие курсы</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="" target="_blank">Расписание занятий</a>
+            <a class="nav-link" href="/contact">Контакты</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="" target="_blank">Контакты</a>
+            <a class="nav-link" href="/faq">ЧАВО</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="" target="_blank">Фото</a>
+            <a class="nav-link" href="http://споспк.рф/">Главная СПК</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="" target="_blank">ЧАВО</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="" target="_blank">Преподаватели</a>
-          </li>
-          @guest
-          <li class="nav-item">
-          @if (Route::has('register'))
-            <div class="dropdown nav-link">
-              <a class="dropdown-toggle text-white" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Личный кабинет
-              </a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" id="show-modal" @click="showModalLogin = true">Вход</a>
-                <a class="dropdown-item" id="show-modal" @click="showModalReg = true">Регистрация</a>
-              </div>
-            </div>
-            @endif
-            @else
-            <li class="nav-item">
-                <a class="nav-link text-white" href="{{ route('logout') }}"
-                  onclick="event.preventDefault();
-                  document.getElementById('logout-form').submit();">
-                  {{ __('Выход') }}
-                </a>
-
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                  </form>
-                
-              </li>
-          </li>
-          @endguest
         </ul>
+      </div>
 
 
         
         <!-- Right -->
         <ul class="navbar-nav nav-flex-icons justify-content-center">
+           <!-- Authentication Links -->
+      <div class="regLinks">
+      @guest
           <li class="nav-item">
+            <a class="nav-link" href="{{ route('login') }}">{{ __('Вход') }}</a>
           </li>
+          @if (Route::has('register'))
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('register') }}">{{ __('Регистрация') }}</a>
+            </li>
+          @endif
+          @else
+            <li class="nav-item dropdown links">
+              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                {{ auth::User()->name }}<span class="caret"></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right links" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                      {{ __('Выход') }}
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+                </form>
+                </div>
+              </li>
+            @endguest
+        <div>
         </ul>
 
       </div>

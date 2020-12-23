@@ -10,6 +10,7 @@ Vue.component('modal', {
       showModalLogin: false,
       showModalReg: false,
       showModalFReg: false,
+      showModalOrder: false,
       showCar: true
     },
   });

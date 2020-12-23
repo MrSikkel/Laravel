@@ -38,9 +38,9 @@
 			@include('navbar.nav')
 			<!--/ Navbar -->
 			<!--Modal-->
-			@include('modal.login')
+			<!--@include('modal.login')
 			@include('modal.recover_pass')
-			@include('modal.reg')
+			@include('modal.reg')-->
 			<!--/ Modal-->
 			</div>
 			<div id="show">

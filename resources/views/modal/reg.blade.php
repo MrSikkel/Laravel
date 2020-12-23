@@ -18,6 +18,58 @@
           </div>
         </div>
         <div class="row">
+          <div class="col-sm-12 my-auto">
+            <div class="md-form">
+              <input name="familiya" type="text" id="familiya" class="form-control{{ $errors->has('familiya') ? ' is-invalid' : '' }}" value="{{ old('familiya') }}" required autofocus>
+              <label for="familiya">{{ __('Фамилия') }}</label>
+              @if ($errors->has('familiya'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('familiya') }}</strong>
+                                    </span>
+                                @endif
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 my-auto">
+            <div class="md-form">
+              <input name="otchestvo" type="text" id="otchestvo" class="form-control{{ $errors->has('otchestvo') ? ' is-invalid' : '' }}" value="{{ old('otchestvo') }}" required autofocus>
+              <label for="otchestvo">{{ __('Отчество') }}</label>
+              @if ($errors->has('otchestvo'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('otchestvo') }}</strong>
+                                    </span>
+                                @endif
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 my-auto">
+            <div class="md-form">
+              <input name="phone_number" type="tel" id="phone_number" class="form-control{{ $errors->has('phone_number') ? ' is-invalid' : '' }}" value="{{ old('phone_number') }}" required autofocus>
+              <label for="phone_number">{{ __('Номер телефона') }}</label>
+              @if ($errors->has('phone_number'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('phone_number') }}</strong>
+                                    </span>
+                                @endif
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 my-auto">
+            <div class="md-form">
+              <input name="date_of_birth" type="date" id="date_of_birth" class="form-control{{ $errors->has('date_of_birth') ? ' is-invalid' : '' }}" value="{{ old('date_of_birth') }}" required autofocus>
+              <label for="date_of_birth">{{ __('Дата рождения') }}</label>
+              @if ($errors->has('date_of_birth'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('date_of_birth') }}</strong>
+                                    </span>
+                                @endif
+            </div>
+          </div>
+        </div>
+        <div class="row">
         <div class="col-sm-12 my-auto">
           <div class="md-form">
             <input  type="password" name="password" id="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" required>
